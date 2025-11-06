@@ -357,6 +357,14 @@ background: var(--dark-orange-yellow-crayola);
 .download-cv-btn ion-icon {
   font-size: 16;
 }
+.download-cv-btn {
+  color: #fff !important;
+}
+
+.download-cv-btn ion-icon {
+  color: #fff !important;
+}
+
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -1062,6 +1070,20 @@ html.light-theme .form-btn:hover::before {
 @media (min-width: 450px) {
   .clients-item { min-width: calc(33.33% - 10px); }
   .project-img, .blog-banner-box { height: auto; }
+}
+
+/* --------------------------------------------------------------
+   #DOWNLOAD CV – MOBILE FIX (add this block anywhere after the
+   existing .download-cv-btn rules)
+   -------------------------------------------------------------- */
+@media (max-width: 580px) {
+
+  /* 1. Sidebar must grow enough to show the button */
+  .sidebar {
+    max-height: 140px;          /* was 112px – gives room for the button */
+    overflow: visible;          /* stop clipping */
+    transition: var(--transition-2);
+  }
 }
 
 /* larger than 580px */
